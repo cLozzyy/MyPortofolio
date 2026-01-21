@@ -34,15 +34,15 @@ const Home = () => {
   const [myfitnesSlide, setMyfitnessSlide] = useState(0);
   const [gaiaSlide, setGaiaSlide] = useState(0);
 
-  // Scroll Progress untuk Hero Section
+  
   const { scrollYProgress } = useScroll();
   
-  // Parallax transformations untuk Hero
+  
   const heroY = useTransform(scrollYProgress, [0, 0.3], [0, 200]);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
   const heroScale = useTransform(scrollYProgress, [0, 0.3], [1, 0.8]);
   
-  // Parallax untuk foto di Hero (bergerak lebih lambat)
+  
   const photoY = useTransform(scrollYProgress, [0, 0.3], [0, -100]);
   
   const tabunginImages = [
@@ -72,7 +72,7 @@ const Home = () => {
     }
   };
 
-  // Animation variants
+  
   const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
     visible: { 
@@ -103,7 +103,7 @@ const Home = () => {
 
   return (
     <div className="home" id="home">
-      {/* Hero Section with Parallax */}
+      
       <section className="hero">
         <motion.div 
           className="intro-cards-hero"
@@ -115,7 +115,7 @@ const Home = () => {
             animate="visible"
             variants={fadeInUp}
           >
-            {/* Text Content - Left Side */}
+            
             <motion.div 
               className="intro-text-content"
               variants={fadeInUp}
@@ -145,7 +145,7 @@ const Home = () => {
               </motion.div>
             </motion.div>
 
-            {/* Photo Content - Right Side with Parallax */}
+            
             <motion.div 
               className="intro-photo-content"
               style={{ y: photoY }}
@@ -164,7 +164,7 @@ const Home = () => {
         </motion.div>
       </section>
 
-      {/* About Section */}
+      
       <motion.section 
         className="about" 
         id="about"
@@ -207,7 +207,7 @@ const Home = () => {
                   </span>
                 </motion.div>
               ))}
-              {/* Duplicate untuk seamless loop */}
+              
               {[blenderImg, cinema4dImg, ciscoImg, figmaImg, vscodeImg, visualstudioImg, unityImg, androidstudioImg, anacondaImg].map((img, idx) => (
                 <motion.div 
                   key={`dup-${idx}`}
@@ -226,7 +226,7 @@ const Home = () => {
         </div>
       </motion.section>
 
-      {/* Education Section */}
+      
       <motion.section 
         className="education" 
         id="education"
@@ -291,7 +291,7 @@ const Home = () => {
         </div>
       </motion.section>
 
-      {/* Projects Preview Section */}
+     
       <motion.section 
         className="projects-preview" 
         id="projects"
@@ -366,7 +366,7 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Project 2: Tabungin */}
+           
             <motion.div 
             className="project-card"
             variants={scaleIn}
@@ -431,7 +431,7 @@ const Home = () => {
             </div>
           </motion.div>
 
-            {/* Project 3: Midnight - Vertical Layout */}
+            
             <motion.div 
               className="project-card project-card-vertical"
               variants={scaleIn}
@@ -453,7 +453,7 @@ const Home = () => {
                 <p><strong>Team Member:</strong> Dave William & Nicholas Andre.</p>
               </div>
 
-              {/* Carousel at Bottom */}
+              
               <div className="project-carousel-section" style={{ width: '100%' }}>
                 <div className="project-carousel-container" style={{ justifyContent: 'center' }}>
                   <button 
@@ -503,7 +503,7 @@ const Home = () => {
         </div>
       </motion.section>
 
-      {/* Contact Section - Spotify Artist Style */}
+      
       <motion.section 
         className="contact-spotify" 
         id="contact"
@@ -528,24 +528,24 @@ const Home = () => {
           Follow my social media for any updates and feel free to reach out!
           </motion.p>
 
-            {/* Social Links */}
+            
             <div className="social-links">
-              {/* GitHub */}
+              
               <motion.a href="https://github.com/cLozzyy" target="_blank" whileHover={{ y: -5 }}>
                 <img src={githubLogo} alt="GitHub" className="social-icon-img" />
               </motion.a>
 
-              {/* LinkedIn */}
+              
               <motion.a href="https://www.linkedin.com/in/nicholasandrenatalino/" target="_blank" whileHover={{ y: -5 }}>
                 <img src={linkedinLogo} alt="LinkedIn" className="linkedim-icon-img" />
               </motion.a>
 
-              {/* Instagram Pribadi */}
+              
               <motion.a href="https://instagram.com/ncholadandre" target="_blank" whileHover={{ y: -5 }}>
                 <img src={instagramLogo} alt="Instagram Pribadi" className="social-icon-img" />
               </motion.a>
 
-              {/* Instagram 3D Art */}
+              
               <motion.a href="https://instagram.com/andre.nich" target="_blank" whileHover={{ y: -5 }}>
                 <div className="instagram-art-wrapper">
                   <img src={instagramLogo} alt="Instagram 3D Art" className="social-icon-img" />

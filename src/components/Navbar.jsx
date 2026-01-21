@@ -63,7 +63,7 @@ const Navbar = () => {
         <li><a href="#projects">Projects</a></li>
       </ul>
 
-      {/* Hamburger Icon */}
+     
       <div 
         className={`hamburger ${isMenuOpen ? "active" : ""}`}
         onClick={toggleMenu}
@@ -73,11 +73,11 @@ const Navbar = () => {
         <span></span>
       </div>
 
-      {/* Mobile Menu */}
+      
       <AnimatePresence>
         {isMenuOpen && (
           <>
-            {/* Backdrop */}
+            
             <motion.div
               className="mobile-menu-backdrop"
               initial={{ opacity: 0 }}
@@ -86,7 +86,7 @@ const Navbar = () => {
               onClick={closeMenu}
             />
 
-            {/* Mobile Menu */}
+            
             <motion.div
               className="mobile-menu"
               variants={menuVariants}

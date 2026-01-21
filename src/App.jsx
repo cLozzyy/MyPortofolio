@@ -8,14 +8,14 @@ import AllProjects from "./pages/AllProjects";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/MyPortofolio">
       <IridescenceBackground />
       <Navbar /> 
       <Routes>
-        {/* HALAMAN UTAMA (HOME) */}
+        
         <Route path="/" element={<Home />} />
 
-        {/* HALAMAN KHUSUS PROJECT */}
+        
         <Route path="/projects" element={<AllProjects />} />
       </Routes>
     </Router>
