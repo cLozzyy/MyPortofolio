@@ -1,0 +1,250 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 70px;
+  background-color: transparent;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.navbar:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.sidename {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 30px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.sidename a{
+  text-decoration: none;
+  color: white;          
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.sidename:hover {
+  color: #667eea;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 30px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #667eea;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #667eea;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger Menu - Hidden on Desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(9px, 9px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* Mobile Menu Backdrop */
+.mobile-menu-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 75%;
+  max-width: 350px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(20px);
+  border-left: 1px solid rgba(102, 126, 234, 0.3);
+  z-index: 1000;
+  padding: 100px 40px;
+}
+
+.mobile-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mobile-menu-list li {
+  list-style: none;
+}
+
+.mobile-menu-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 600;
+  font-family: 'Urbanist', sans-serif;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 10px 0;
+  position: relative;
+}
+
+.mobile-menu-list a::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 2px;
+  background: #667eea;
+  transition: width 0.3s ease;
+}
+
+.mobile-menu-list a:hover {
+  color: #667eea;
+  padding-left: 15px;
+}
+
+.mobile-menu-list a:hover::before {
+  width: 10px;
+}
+
+/* Tablet & Mobile Responsive */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 20px 40px;
+  }
+
+  .nav-links {
+    gap: 60px;
+  }
+
+  .nav-links a {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+
+  .sidename {
+    font-size: 26px;
+  }
+
+  /* Hide Desktop Menu */
+  .nav-links {
+    display: none;
+  }
+
+  /* Show Hamburger */
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .sidename {
+    font-size: 22px;
+  }
+
+  .hamburger span {
+    width: 25px;
+  }
+
+  .mobile-menu {
+    width: 85%;
+    padding: 80px 30px;
+  }
+
+  .mobile-menu-list {
+    gap: 35px;
+  }
+
+  .mobile-menu-list a {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 360px) {
+  .sidename {
+    font-size: 20px;
+  }
+
+  .mobile-menu-list a {
+    font-size: 24px;
+  }
+}

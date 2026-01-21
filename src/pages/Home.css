@@ -1,0 +1,656 @@
+/* =========================================
+   1. GLOBAL RESET & BASE STYLES
+   ========================================= */
+* {
+  box-sizing: border-box; /* Sangat penting agar padding tidak menambah lebar elemen */
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* MEMATIKAN SCROLL KANAN-KIRI */
+  margin: 0;
+  padding: 0;
+  font-family: 'Urbanist', sans-serif; /* Pastikan font default ter-set */
+}
+
+.home {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden; /* Double protection untuk overflow */
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto; /* Center container */
+  padding: 0 20px;
+}
+
+/* =========================================
+   2. HERO SECTION
+   ========================================= */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.intro-cards-hero {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1600px;
+  margin: 100px auto 0;
+  padding: 0 20px;
+}
+
+.intro-card-large {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  background: rgba(0, 0, 0, 0.329);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  padding: 60px;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 1400px;
+  align-items: center;
+}
+
+.intro-card-large:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(102, 126, 234, 0.5);
+  box-shadow: 0 15px 50px rgba(102, 126, 234, 0.2);
+  transform: translateY(-5px);
+}
+
+.intro-text-content h2 {
+  font-size: 50px;
+  color: white;
+  margin-bottom: 25px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.intro-text-content p {
+  font-size: 25px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.intro-photo-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+}
+
+.intro-photo-image {
+  width: 70%;
+  height: auto; /* Auto height agar rasio terjaga */
+  object-fit: contain;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+/* SKILL TAGS */
+.intro-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 50px;
+  text-align: left;
+}
+
+.skill-tag {
+  background: linear-gradient(135deg, rgba(18, 2, 36, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%);
+  color: #f8f8f8c7;
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* =========================================
+   3. ABOUT SECTION & SOFTWARE
+   ========================================= */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 70vh;
+  padding: 80px 20px;
+  backdrop-filter: blur(10px);
+}
+
+.about h2 {
+  font-size: 100px; /* Adjusted slightly */
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.about p {
+  font-size: 26px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: left;
+  max-width: 1600px; /* Biar tidak terlalu lebar */
+}
+
+.about p1 {
+  font-size: 40px;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  margin-top: 30px;
+}
+
+/* SOFTWARE CAROUSEL */
+.intro-software-skills {
+  margin-top: 20px;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.software-carousel {
+  display: flex;
+  gap: 40px;
+  animation: scroll 30s linear infinite;
+  width: fit-content;
+  padding: 25px;
+}
+
+.software-carousel:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.software-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 15px;
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  min-width: 100px;
+}
+
+.software-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.software-name {
+  color: #f8f8f8c7;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* =========================================
+   4. EDUCATION SECTION
+   ========================================= */
+.education {
+  min-height: 100vh;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.education h2 {
+  font-size: 80px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.education-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.education-logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.education-content h3 {
+  font-size: 28px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.education-content p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.certificate-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto 0;
+}
+
+.certificate-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+}
+
+.certificate-item h3 {
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.certificate-content p {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 5px 0;
+}
+
+/* =========================================
+   5. PROJECTS SECTION
+   ========================================= */
+.projects-preview {
+  min-height: 80vh;
+  padding: 80px 20px;
+}
+
+.projects-preview h2 {
+  font-size: 80px;
+  color: white;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.project-card {
+  background: rgba(0, 0, 0, 0.329);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.project-card h3 {
+  font-size: 36px;
+  color: #fdfdfd;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.project-text-content p {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+}
+
+/* Carousel Components */
+.project-carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.mobile-phone-mockup {
+  position: relative;
+  width: 250px;
+  height: 500px; /* Ukuran default */
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 35px;
+  padding: 10px;
+  border: 6px solid rgba(50, 50, 50, 0.8);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.landscape-photo-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.landscape-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-button {
+  background: rgba(102, 126, 234, 0.3);
+  border: 1px solid rgba(102, 126, 234, 0.5);
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  z-index: 5;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+.dot.active {
+  background: rgba(102, 126, 234, 0.9);
+  width: 30px;
+  border-radius: 5px;
+}
+
+/* Project Card Vertical Override */
+.project-card-vertical {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.project-card-vertical .project-text-content {
+  text-align: center;
+  margin-top: 20px;
+}
+.project-card-vertical .project-text-content p {
+  text-align: center;
+}
+
+/* =========================================
+   6. CONTACT SECTION (SPOTIFY STYLE)
+   ========================================= */
+.contact-spotify {
+  /* Trik untuk Full Width (Memenuhi layar) */
+  position: relative;
+  width: 100vw;           /* Gunakan 100% lebar viewport */
+  max-width: none;        /* HAPUS batasan lebar 1400px sebelumnya */
+  margin: 50px 0 0 0;     /* Margin hanya di atas, kiri kanan 0 */
+  border-radius: 0;       /* HAPUS sudut melengkung agar nempel sudut layar */
+
+  /* Trik teknis untuk "mendobrak" keluar jika ada padding di parent container */
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  /* Styling visual lainnya */
+  min-height: 50vh;
+  display: flex;
+  align-items: flex-end;  /* Teks di bawah */
+  padding: 60px 0;        /* Padding hanya atas-bawah. Kiri-kanan diurus container dalam */
+  background-color: #12121223;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center 30%;
+}
+
+.spotify-bg-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.95) 100%);
+  z-index: 1;
+}
+
+.spotify-container {
+  position: relative;
+  z-index: 2;
+  color: white;
+  width: 100%;
+  max-width: 1400px; /* Batasi lebar konten teksnya saja */
+  margin: 0 auto;    /* Tengahkan konten teks */
+  padding: 0 20px;   /* Beri jarak aman dari pinggir */
+}
+
+.artist-badge {
+  display: flex;
+  font-size: 25px;
+  font-weight: 100;
+  margin: 10px 0 20px 0;
+  letter-spacing: 1px;
+  line-height: 1.8;
+}
+
+.artist-name {
+  font-size: 90px;
+  font-weight: 700;
+  margin: 10px 0 20px 0;
+  letter-spacing: -2px;
+  line-height: 1.1;
+}
+
+.monthly-listeners {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.spotify-actions {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.spotify-play-btn {
+  background: #f00000;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  transition: transform 0.2s;
+}
+
+.social-links {
+  display: flex;
+  gap: 30px;
+}
+
+.art-label {
+  top: -10px;
+  right: -15px;
+  background: #0f12109c;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  font-weight: bold;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+.social-icon-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.verified-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.linkedim-icon-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* =========================================
+   7. RESPONSIVE MEDIA QUERIES (RAPID & CLEAN)
+   ========================================= */
+
+/* --- TABLET / LAPTOP KECIL (Max 1024px) --- */
+@media (max-width: 1024px) {
+  .intro-card-large {
+    grid-template-columns: 1fr; /* Stack intro card */
+    text-align: center;
+    gap: 40px;
+  }
+  .intro-text-content h2, 
+  .intro-text-content p,
+  .intro-skills {
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .education-grid {
+    grid-template-columns: 1fr; /* Stack education */
+  }
+  
+  .project-card {
+    grid-template-columns: 1fr; /* Stack project card standard */
+    text-align: center;
+  }
+  .project-text-content p {
+    text-align: center;
+  }
+  
+  .about h2, .education h2, .projects-preview h2 {
+    font-size: 60px;
+  }
+}
+
+/* --- MOBILE LANDSCAPE / TABLET PORTRAIT (Max 768px) --- */
+@media (max-width: 768px) {
+  /* Hero */
+  .hero { padding: 60px 15px; }
+  .intro-card-large { padding: 30px 20px; }
+  .intro-text-content h2 { font-size: 32px; }
+  .intro-text-content p { font-size: 18px; }
+  
+  /* About */
+  .about h2 { font-size: 45px; }
+  .about p { font-size: 16px; }
+  .about p1 { font-size: 24px; }
+  
+  /* Education */
+  .education h2 { font-size: 45px; }
+  .education-item { flex-direction: column; padding: 20px; }
+  .education-logo { width: 100px; height: 100px; }
+  .certificate-item h3 { font-size: 28px; }
+  
+  /* Projects */
+  .projects-preview h2 { font-size: 45px; }
+  .project-card { padding: 25px 15px; gap: 25px; }
+  .project-card h3 { font-size: 28px; }
+  
+  /* Phone Mockup Scale Down for Tablet */
+  .mobile-phone-mockup {
+    width: 200px;
+    height: 400px;
+  }
+  
+  /* Contact Spotify */
+  .contact-spotify { padding: 30px; }
+  .artist-name { font-size: 45px; }
+  .spotify-actions { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .spotify-play-btn { width: 100%; text-align: center; }
+}
+
+/* --- MOBILE PORTRAIT (Max 480px) --- */
+@media (max-width: 480px) {
+  .intro-text-content h2 { font-size: 28px; }
+  
+  /* Small adjustments for very small screens */
+  .mobile-phone-mockup {
+    width: 180px;
+    height: 360px;
+    border-width: 4px; /* Tipiskan border HP */
+  }
+  
+  .landscape-photo-container {
+    width: 100%;
+  }
+  
+  .carousel-button {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+  
+  .social-links {
+    gap: 15px;
+  }
+  
+  .contact-spotify {
+    margin: 20px 0; /* Full width di HP */
+    border-radius: 10px;
+  }
+}
