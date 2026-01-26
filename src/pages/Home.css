@@ -328,7 +328,7 @@ html, body {
   line-height: 1.8;
 }
 
-/* Carousel Components */
+
 .project-carousel-container {
   display: flex;
   align-items: center;
@@ -339,7 +339,7 @@ html, body {
 .mobile-phone-mockup {
   position: relative;
   width: 250px;
-  height: 500px; /* Ukuran default */
+  height: 500px; 
   background: rgba(0, 0, 0, 0.8);
   border-radius: 35px;
   padding: 10px;
@@ -405,7 +405,7 @@ html, body {
   border-radius: 5px;
 }
 
-/* Project Card Vertical Override */
+
 .project-card-vertical {
   display: flex !important;
   flex-direction: column;
@@ -607,7 +607,7 @@ html, body {
   }
 
   .intro-photo-content {
-    width: 150%;
+    width: 130%;
     display: flex;
     justify-content: center;    
     margin-bottom: 20px;
