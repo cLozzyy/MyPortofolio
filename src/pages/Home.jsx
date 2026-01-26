@@ -18,9 +18,10 @@ import fitnessgym from "../assets/fitnessgym.jpeg";
 import fitnesshome from "../assets/fitnesshome.jpeg";
 import fitnesshome1 from "../assets/fitnesshome1.jpeg";
 import fitnessstore from "../assets/fitnesstore.jpeg";
-import midnightlobby from "../assets/midnightlobby.png";
-import midnightnpc from "../assets/midnightnpc.png";
-import midnightmania from "../assets/midnightmania.png";
+import midnight1 from "../assets/midnight1.jpeg";
+import midnight2 from "../assets/midnight2.jpeg";
+import midnight3 from "../assets/midnight3.jpeg";
+import midnight4 from "../assets/midnight4.jpeg";
 import tabungin1 from "../assets/tabungin1.jpeg";
 import tabungin2 from "../assets/tabungin2.jpeg";
 import tabungin3 from "../assets/tabungin3.jpeg";
@@ -59,9 +60,10 @@ const Home = () => {
   ];
 
   const gaiaImages = [
-    midnightlobby,
-    midnightnpc,
-    midnightmania,
+    midnight1,
+    midnight2,
+    midnight3,
+    midnight4,
   ];
   
   const handleSlide = (direction, slides, currentSlide, setSlide) => {
@@ -438,7 +440,6 @@ const Home = () => {
               whileHover={{ y: -15, scale: 1.01 }}
               style={{ gridTemplateColumns: '1fr', gap: '50px' }}
             >
-              {/* Text Content at Top */}
               <div className="project-text-content" style={{ justifyContent: 'left' }}>
                 <h3>Midnight Melody - Game Development Course</h3>
                 <p>

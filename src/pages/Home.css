@@ -557,14 +557,17 @@ html, body {
     grid-template-columns: 1fr; 
   }
 
-  
-  
   .project-card {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
+  }
+
+
+  .project-text-content h3 {
     text-align: center;
   }
+
   .project-text-content p {
-    text-align: center;
+    text-align: left;
   }
   
   .about h2, .education h2, .projects-preview h2 {
@@ -572,20 +575,43 @@ html, body {
   }
 }
 
+ 
 
 @media (max-width: 768px) {
   
   .hero { padding: 60px 15px; }
   .intro-card-large { padding: 30px 20px; }
-  .intro-text-content h2 { font-size: 32px; }
-  .intro-text-content p { font-size: 18px; }
+  .intro-text-content h2 { font-size: 28px; }
+  .intro-text-content p { font-size: 16px; }
   
  
   .about h2 { font-size: 45px; }
   .about p { font-size: 16px; }
   .about p1 { font-size: 24px; }
   
+  .intro-card-large {
+    display: flex;             
+    flex-direction: column-reverse;
+    align-items: center;        
+    gap: 20px;                  
+    padding: 30px 20px;
+  }
 
+  .intro-text-content {
+    text-align: center;        
+    width: 100%;
+  }
+
+  .project-card-vertical .project-text-content p {
+    text-align: left;
+  }
+
+  .intro-photo-content {
+    width: 150%;
+    display: flex;
+    justify-content: center;    
+    margin-bottom: 20px;
+  }
   
   .education h2 { font-size: 45px; }
   .education-item { flex-direction: column; padding: 20px; text-align: center; }
@@ -593,12 +619,12 @@ html, body {
   .certificate-item h3 { font-size: 28px; }
   .certificate-item p { font-size: 17px; }
   
- 
+  
   .projects-preview h2 { font-size: 45px; }
   .project-card { padding: 25px 15px; gap: 25px; }
   .project-card h3 { font-size: 23px; }
   .project-card p { font-size: 17px; }
-  
+
   
   .mobile-phone-mockup {
     width: 200px;
@@ -639,11 +665,15 @@ html, body {
   
   .contact-spotify {
     margin: px 0; 
-    border-radius: 10px;
   }
+
+  .artist-badge {
+    font-size: 15px;
+  }
+
 
   .projects-preview h2 { font-size: 45px; }
   .project-card { padding: 25px 15px; gap: 25px; }
   .project-card h3 { font-size: 23px; }
-  .project-card p { font-size: 17px; }
+  .project-card p { font-size: 15px; }
 }
