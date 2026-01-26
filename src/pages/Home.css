@@ -556,6 +556,8 @@ html, body {
   .education-grid {
     grid-template-columns: 1fr; 
   }
+
+  
   
   .project-card {
     grid-template-columns: 1fr; 
@@ -583,16 +585,19 @@ html, body {
   .about p { font-size: 16px; }
   .about p1 { font-size: 24px; }
   
+
   
   .education h2 { font-size: 45px; }
-  .education-item { flex-direction: column; padding: 20px; }
+  .education-item { flex-direction: column; padding: 20px; text-align: center; }
   .education-logo { width: 100px; height: 100px; }
   .certificate-item h3 { font-size: 28px; }
+  .certificate-item p { font-size: 17px; }
   
  
   .projects-preview h2 { font-size: 45px; }
   .project-card { padding: 25px 15px; gap: 25px; }
-  .project-card h3 { font-size: 28px; }
+  .project-card h3 { font-size: 23px; }
+  .project-card p { font-size: 17px; }
   
   
   .mobile-phone-mockup {
@@ -633,7 +638,12 @@ html, body {
   }
   
   .contact-spotify {
-    margin: 20px 0; 
+    margin: px 0; 
     border-radius: 10px;
   }
+
+  .projects-preview h2 { font-size: 45px; }
+  .project-card { padding: 25px 15px; gap: 25px; }
+  .project-card h3 { font-size: 23px; }
+  .project-card p { font-size: 17px; }
 }

@@ -8,7 +8,7 @@ import AllProjects from "./pages/AllProjects";
 
 function App() {
   return (
-    <Router basename="/MyPortofolio">
+    <Router basename="/MyPortfolio">
       <IridescenceBackground />
       <Navbar /> 
       <Routes>
